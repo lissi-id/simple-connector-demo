@@ -1,0 +1,47 @@
+<div class="container mx-auto pt-5 pb-5">
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="px-4 py-5 sm:px-6">
+            <h2 class="text-lg leading-6 font-medium text-gray-900">Presentation Details</h2>
+        </div>
+        <div class="border-t border-gray-200">
+            <dl>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                        Type
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <%- data.type %>
+                    </dd>
+                </div>
+            </dl>
+            <dl>
+                
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                        Issuer
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <%- data.issuer %>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+        <div class="px-4 py-5 sm:px-6">
+            <h2 class="text-lg leading-6 font-medium text-gray-900">Presented Claims</h2>
+        </div>
+        <div class="border-t border-gray-200">
+            <dl>
+                <% data.presentedClaims.forEach(function(element){ %>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            <%= element.claimName %>
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <%= element.claimValue %>
+                        </dd>
+                    </div>
+                <% }); %>
+            </dl>
+        </div>
+    </div>
+</div>
