@@ -19,6 +19,12 @@ TOKEN_ENDPOINT=https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token
 SCOPE=api://{default_scope}
 ```
 
+## Install
+
+```
+npm install
+```
+
 ## Develop
 
 ```
